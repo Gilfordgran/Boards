@@ -1,0 +1,8 @@
+{{input value=selected type="hidden" name=name}}
+<i class="dropdown icon"></i>
+<div class="default text">{{placeholder}}</div>
+<div class="menu">
+  {{#each elements as |elm|}}
+    <div class="item" data-value={{elm.id}}>{{elm}}</div>
+  {{/each}}
+</div>

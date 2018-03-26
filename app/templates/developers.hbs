@@ -1,0 +1,8 @@
+<h2 class="ui header">Developers</h2>
+{{#link-to "developers.new" class="ui button"}}
+  <i class="ui plus icon"></i>
+  Add developer...
+{{/link-to}}
+<div class="ui divider"></div>
+{{outlet}}
+{{#ui-table elements=model.developers fields=model.fields operations=model.operations emptyMessage="No developer to display"}}{{/ui-table}}
