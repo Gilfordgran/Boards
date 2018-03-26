@@ -1,0 +1,43 @@
+{{#ui-form newValue=model.story  oldValue=model.oldProject validation="save" cancel="cancel" bigIcon='file' smallIcon='plus' header=model.project.name description='Adding a story in project'}}
+
+  <div class="field">
+    <label for="code">Code</label>
+    {{input id="code" placeholder="Code" value=model.story.code}}
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    {{textarea id="description" placeholder="Description" value=model.story.description}}
+  </div>
+  <div class="field">
+    <label for="developer">Developer</label>
+    {{multi-select selected=model.idDeveloper name="developer" placeholder="Developer" elements=model.developers selectedElements=model.story.developer}}
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <div id="ddTags" class="ui dropdown multiple selection search">
+        {{input value=model.idTags type="hidden"}}
+        <div class="default text">Choose tags...</div>
+        <div class="menu">
+          {{#each model.tags as |tag|}}
+            <div class="item" data-value="{{tag.id}}">
+              <div class="ui {{tag.color}} empty circular label"></div>
+              {{tag.title}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui action input">
+        {{input placeholder="tag..." value=model.tag.title}}
+        <select onchange={{action (mut model.tag.color) value="target.value"}} class="ui compact selection dropdown">
+          {{#each model.colors as |color|}}
+          <option value="{{color}}">{{color}}</option>
+          {{/each}}
+        </select>
+        <a class="ui button" {{action "newTag" model.tag model}}>New tag</a>
+      </div>
+    </div>
+  </div>
+{{/ui-form}}
+{{outlet}}
