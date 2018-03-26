@@ -14,17 +14,20 @@
   </div>
   <div class="two fields">
     <div class="field">
-      <div id="ddTags" class="ui dropdown multiple selection search">
-        {{input value=model.idTags type="hidden"}}
-        <div class="default text">Choose tags...</div>
-        <div class="menu">
-          {{#each model.tags as |tag|}}
-            <div class="item" data-value="{{tag.id}}">
-              <div class="ui {{tag.color}} empty circular label"></div>
-              {{tag.title}}
-            </div>
-          {{/each}}
+      <div class="ui action input">
+        <div id="ddTags" class="ui dropdown multiple selection search">
+          {{input value=model.idTags type="hidden"}}
+          <div class="default text">Choose tags...</div>
+          <div class="menu">
+            {{#each model.tags as |tag|}}
+              <div class="item" data-value="{{tag.id}}">
+                <div class="ui {{tag.color}} empty circular label"></div>
+                {{tag.title}}
+              </div>
+            {{/each}}
+          </div>
         </div>
+        <a class="ui button" {{action "newTag" model.tag model}}>Edit tag</a>
       </div>
     </div>
     <div class="field">
