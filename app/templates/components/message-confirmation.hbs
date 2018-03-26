@@ -1,0 +1,9 @@
+<div class="ui icon message {{uiClass}}">
+  <i class="ui question circle icon"></i>
+  <div class="content">
+    {{{yield}}}
+    <div class="ui divider"></div>
+    <button class="ui right floated button" {{action "cancelConfirm"}}>Cancel</button>
+    <button class="ui {{uiClass}} right floated button" {{action "submitConfirm"}}>Confirm</button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  {{#ui-form oldValue=model.dev newValue=model.data  validation="save" cancel="cancel" bigIcon='user' smallIcon='edit' header='Developer' description='Editing an existing object'}}
+    <div class="field">
+      <label id="" class="" for="frmEdit-identity">Identity</label>
+      <div id="div-frmEdit-identity" class="ui input">
+        {{input id="frmEdit-identity" value=model.data.identity placeholder="Identity"}}
+      </div>
+    </div>
+  {{/ui-form}}
+</div>{{outlet}}

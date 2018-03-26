@@ -1,0 +1,15 @@
+  <div class="ui message icon">
+    <i class="icons big">
+      <i class="icon {{bigIcon}}"></i>
+      <i class="icon inverted {{smallIcon}} corner"></i>
+    </i>
+    <div class="content"><div class="header">{{header}}</div>
+      {{description}}
+    </div>
+  </div>
+  {{yield}}
+<div class="ui segment">
+  <button class="ui button positive" {{action "validation"}}><i id="icon-bt-okay" class="icon check circle"></i> Validate</button>
+  &nbsp;
+  <button class="ui button" {{action "cancel"}}><i id="icon-bt-cancel" class="icon remove circle outline"></i> Cancel</button>
+</div>

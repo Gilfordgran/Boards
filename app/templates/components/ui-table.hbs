@@ -1,0 +1,49 @@
+<thead>
+<tr>
+  {{#each fields as |field|}}
+    <th>{{field.caption}}</th>
+  {{/each}}
+  {{#if operations.length}}
+    <th></th>
+  {{/if}}
+</tr>
+</thead>
+<tbody>
+{{#each elements as |element|}}
+  <tr>
+    {{#each fields as |field|}}
+      {{#if field.component}}
+        <td>{{component field.component value=(get element field.name)}}</td>
+      {{else}}
+        <td>{{get element field.name}}</td>
+      {{/if}}
+    {{/each}}
+  {{#if operations.length}}
+    <td>
+      {{#each operations as |operation|}}
+          {{#if operation.link}}
+            {{#link-to operation.link element.id class="ui basic circular right floated icon button"}}<i class="ui {{operation.icon}} icon"></i>{{/link-to}}
+          {{else}}
+            <a {{action operation.action element}} class="ui basic circular right floated icon button"><i class="ui {{operation.icon}} icon"></i></a>
+          {{/if}}
+      {{/each}}
+    </td>
+  {{/if}}
+  </tr>
+{{else}}
+  <tr>
+    <td colspan="{{size}}">
+      <div class="ui icon message">
+        <i class="warning circle icon"></i>
+        <div class="content">
+          <div class="header">
+            Elements
+          </div>
+          {{emptyMessage}}
+        </div>
+      </div>
+    </td>
+  </tr>
+{{/each}}
+</tbody>
+{{yield}}

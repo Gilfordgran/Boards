@@ -1,0 +1,9 @@
+<h2 class="ui header">Projects</h2>
+{{#link-to "projects.new" class="ui button"}}
+  <i class="ui plus icon"></i>
+  Add project...
+{{/link-to}}
+  <div class="ui divider"></div>
+{{outlet}}
+{{#ui-table elements=model.projects fields=model.fields operations=model.operations emptyMessage="No project to display"}}{{/ui-table}}
+
