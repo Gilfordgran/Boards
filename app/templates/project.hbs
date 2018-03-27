@@ -5,12 +5,28 @@
     <div class="sub header">{{model.descriptif}}</div>
   </div>
 </h2>
-<h3 class="ui header">Stories</h3>
-{{#link-to "story.new" model.id class="ui button"}}
-  <i class="ui plus icon"></i>
-  Ajout story dans projet...
-{{/link-to}}
-{{#link-to "projects" class="ui button"}}<i class="caret square left icon"></i>Retour aux projets{{/link-to}}
+
+<h3 class="ui header">Vue globale du projet</h3>
+
+<div>
+  <div class="ui button primary">
+    <i class="file open icon"></i> Stories
+  </div>
+  <div class="ui button">
+    <i class="users open icon"></i> Developers
+  </div>
+</div>
+
+<br>
+
+<div>
+  {{#link-to "story.new" model.id class="ui button"}}
+    <i class="ui plus icon"></i>
+    Ajout story dans projet...
+  {{/link-to}}
+  {{#link-to "projects" class="ui button"}}<i class="caret square left icon"></i>Retour aux projets{{/link-to}}
+</div>
+
 <div class="ui divider"></div>
 <div class="ui middle aligned divided list">
   {{#each model.stories as |story|}}
@@ -40,4 +56,5 @@
   </div>
  {{/each}}
 </div>
+
 {{outlet}}
