@@ -1,6 +1,6 @@
 {{#ui-form newValue=model.newProject  oldValue=model.oldProject validation="save" cancel="cancel" bigIcon='table' isNew=model.isNew header='Project'}}
   <div class="field">
-    <label for="name">Name</label>
+    <label for="name">Nom</label>
     {{input id="name" placeholder="Name" value=model.newProject.name}}
   </div>
   <div class="field">
@@ -8,16 +8,16 @@
     {{textarea id="description" placeholder="Description" value=model.newProject.description}}
   </div>
   <div class="field">
-    <label for="owner">Owner</label>
+    <label for="owner">Propiétaire</label>
     {{multi-select selected=model.idDeveloper name="owner" placeholder="Owner" elements=model.developers selectedElements=model.newProject.owner}}
   </div>
   <div class="two fields">
     <div class="field">
-      <label for="startDate">Start date</label>
+      <label for="startDate">Date Début</label>
       {{ui-calendar id="startDate" type="date" date=model.newProject.startDate onChange=(action (mut model.newProject.startDate)) placeholder="Select date"}}
     </div>
     <div class="field">
-      <label for="dueDate">Due date</label>
+      <label for="dueDate">Date Fin</label>
       {{ui-calendar id="dueDate" startDate=model.newProject.startDate type="date" date=model.newProject.dueDate onChange=(action (mut model.newProject.dueDate)) placeholder="Select date"}}
     </div>
   </div>
