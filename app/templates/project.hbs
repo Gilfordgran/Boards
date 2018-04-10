@@ -13,19 +13,21 @@
     <i class="file open icon"></i> Stories
   </div>
   <div class="ui button">
-    <i class="users open icon"></i> Developers
+    <i class="users open icon"></i> Developpeurs
   </div>
+
+  <br><br>
+
+  <div>
+    {{#link-to "story.new" model.id class="ui button"}}<i class="ui plus icon"></i> Ajouter une story au projet...{{/link-to}}
+
+    {{#link-to "projects" class="ui button"}}<i class="caret square left icon"></i>Retour aux projets{{/link-to}}
+  </div>
+
 </div>
 
 <br>
 
-<div>
-  {{#link-to "story.new" model.id class="ui button"}}
-    <i class="ui plus icon"></i>
-    Ajout story dans projet...
-  {{/link-to}}
-  {{#link-to "projects" class="ui button"}}<i class="caret square left icon"></i>Retour aux projets{{/link-to}}
-</div>
 
 <div class="ui divider"></div>
 <div class="ui middle aligned divided list">

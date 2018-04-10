@@ -9,7 +9,7 @@
     {{textarea id="description" placeholder="Description" value=model.story.description}}
   </div>
   <div class="field">
-    <label for="developer">Developer</label>
+    <label for="developer">Developpeur</label>
     {{multi-select selected=model.idDeveloper name="developer" placeholder="Developer" elements=model.developers selectedElements=model.story.developer}}
   </div>
   <div class="two fields">
@@ -17,7 +17,7 @@
       <div class="ui action input">
         <div id="ddTags" class="ui dropdown multiple selection search">
           {{input value=model.idTags type="hidden"}}
-          <div class="default text">Choose tags...</div>
+          <div class="default text">Choix du tag...</div>
           <div class="menu">
             {{#each model.tags as |tag|}}
               <div class="item" data-value="{{tag.id}}">
@@ -27,7 +27,7 @@
             {{/each}}
           </div>
         </div>
-        <a class="ui button" {{action "newTag" model.tag model}}>Edit tag</a>
+        <a class="ui button" {{action "newTag" model.tag model}}>Editer tag</a>
       </div>
     </div>
     <div class="field">
@@ -38,7 +38,7 @@
           <option value="{{color}}">{{color}}</option>
           {{/each}}
         </select>
-        <a class="ui button" {{action "newTag" model.tag model}}>New tag</a>
+        <a class="ui button" {{action "newTag" model.tag model}}>Nouveau tag</a>
       </div>
     </div>
   </div>
