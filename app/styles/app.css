@@ -1,0 +1,18 @@
+.imageFonctionnalité {
+  width: 19%;
+  height: 200px;
+  background: black;
+  float: left;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.descriptionFonctionnalité {
+  width: 19%;
+  height: 200px;
+  text-align: justify;
+  float: left;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 15px;
+}

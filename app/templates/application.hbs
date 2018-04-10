@@ -1,14 +1,32 @@
 <div class="ui container">
-  <div class="ui secondary  menu">
-    {{#link-to "index" class="item"}}
-      Accueil
-    {{/link-to}}
-    {{#link-to "projects" class="item"}}
-      Projets
-    {{/link-to}}
-    {{#link-to "developers" class="item"}}
-      Développeurs
-    {{/link-to}}
+
+  <!-- Si pas connecté -->
+  <div style="display: inline-block; width: 100%; margin-top: 10px">
+    <div class="ui secondary menu" style="float: left">
+      {{#link-to "index" class="item"}}
+        <i class="list icon"></i> Boards
+      {{/link-to}}
+
+      {{#link-to "projects" class="item"}}
+        Projets
+      {{/link-to}}
+
+      {{#link-to "developers" class="item"}}
+        Développeurs
+      {{/link-to}}
+    </div>
+
+    <div class="ui secondary menu" style="float: right; margin-top: 0px;">
+      {{#link-to "projects" class="item"}}
+        <i class="user icon"></i> Inscription
+      {{/link-to}}
+
+      {{#link-to "developers" class="item"}}
+        <i class="sign in icon"></i> Connexion
+      {{/link-to}}
+    </div>
   </div>
+
+  <!-- Si connecté ne pas afficher connexion et inscription -->
   {{outlet}}
 </div>
