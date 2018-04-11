@@ -21,6 +21,7 @@ Router.map(function() {
 
   this.route('story', function() {
     this.route('new', {path: 'new/:project_id'});
+    this.route('update',{ path: 'update/:project_id' });
   });
   this.route('connexion');
 });

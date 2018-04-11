@@ -1,12 +1,8 @@
-<h2 class="ui header">
-  <i class="folder open icon"></i>
-  <div class="content">
-    {{model.name}}
-    <div class="sub header">{{model.descriptif}}</div>
-  </div>
-</h2>
-
-<h3 class="ui header">Vue globale du projet</h3>
+<div id="homeHeader" style="text-align: center; border-bottom: 2px solid grey; border-top: 2px solid grey; padding-top: 15px; margin-bottom: 25px">
+  <h1>Projet {{model.name}}</h1>
+  <i>Consulter les stories liées à vos projets</i>
+  <br> <br>
+</div>
 
 <div>
   <div class="ui button primary">
@@ -38,9 +34,9 @@
         <a class="ui basic right pointing label">
           {{story.developer.identity}}
         </a>
-        <div class="ui button">
+        {{#link-to "story.update" model.id class="ui button"}}
           <i class="user icon"></i> Mise à jour...
-        </div>
+        {{/link-to}}
       </div>
     </div>
     <i class="big file middle aligned icon"></i>
@@ -60,3 +56,5 @@
 </div>
 
 {{outlet}}
+
+<footer style="text-align: center">2 SIO | 2018 © Tous droits réservés</footer>
