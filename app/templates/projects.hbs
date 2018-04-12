@@ -1,9 +1,16 @@
-<h2 class="ui header">Projets</h2>
-{{#link-to "projects.new" class="ui button"}}
-  <i class="ui plus icon"></i>
-  Ajout projet...
-{{/link-to}}
+<div id="homeHeader" style="text-align: center; border-bottom: 2px solid grey; border-top: 2px solid grey; padding-top: 15px; margin-bottom: 25px">
+  <h1>Projets</h1>
+  <i>Consulter vos projets</i>
+  <br> <br>
+</div>
+
+{{#link-to "projects.new" class="ui button"}}<i class="ui plus icon"></i>Ajout projet{{/link-to}}
+
+{{#link-to "index" class="ui button"}}<i class="caret square left icon"></i>Retour tableau de bord{{/link-to}}
+
   <div class="ui divider"></div>
 {{outlet}}
 {{#ui-table elements=model.projects fields=model.fields operations=model.operations emptyMessage="No project to display"}}{{/ui-table}}
+
+<footer style="text-align: center">2 SIO | 2018 © Tous droits réservés</footer>
 

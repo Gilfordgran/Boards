@@ -7,32 +7,32 @@ import Ember from 'ember';
 export default Route.extend({
   model(params){
     return RSVP.hash({
-      story: EmberObject.create(),
-      project: this.get('store').findRecord('project',params.project_id),
+      oldStory: this.get('store').findRecord('story',params.story_id),
       developers: this.get('store').findAll('developer'),
-      idDeveloper:[],
-      idTags:[],
-      tags: this.get('store').findAll('tag'),
-      colors:['black','blue','green','orange','pink','purple','red','teal','yellow','positive','negative'],
-      tag: EmberObject.create({}),
-      isNew: true,
+      project: this.get('store').findRecord('project',params.project_id),
     });
+  },
+  afterModel(model){
+    let newStory=EmberObject.create(JSON.parse(JSON.stringify(model.oldStory)));
+    Ember.set(model,'newStory',newStory);
+    Ember.set(model,'idDeveloper',model.oldProject.get('developer').get('id'));
   },
   actions:{
     didTransition() {
       Ember.run.next(this, 'initUI');
     },
-    save(oldStory, story){
+    save(oldStory,story) {
       let model = this.modelFor(this.routeName);
       let project=Ember.get(model,'project');
-      story = this.get('store').createRecord('story',{code: story.code, description:story.description,project:project});
+      oldStory.set('code',newStory.code);
+      oldStory.set('description',newStory.description);
+      oldStory.set('project', project);
       let idDeveloper = Ember.get(model, 'idDeveloper');
       let dev = Ember.get(model, 'developers').find(dev => dev.id == idDeveloper);
-      story.set('developer', dev);
-
+      oldStory.set('developer', dev);
       let idTags=Ember.get(model,'idTags');
       let tags=Ember.get(model,'tags').filter((item, index, self) => idTags.includes(item.id));
-      story.set('tags',tags);
+      oldStory.set('tags',tags);
       let self=this;
       story.save().then(()=>{
         project.save().then(()=>{self.transitionTo("project",project);});
@@ -55,5 +55,5 @@ export default Route.extend({
   },
   initUI() {
     Ember.$('.ui.dropdown').dropdown();
-    }
+  }
 });

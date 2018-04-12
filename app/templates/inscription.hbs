@@ -5,17 +5,17 @@
           <div id="div-frmEdit-nom" class="ui input">
             {{input id="frmEdit-nom" value=model.identity placeholder="Nom"}}
           </div>
-        <br>
+        <br><br>
         <label id="" class="" for="frmEdit-prenom">Prénom</label>
           <div id="div-frmEdit-prenom" class="ui input">
             {{input id="frmEdit-prenom" value=model.identity placeholder="Prénom"}}
           </div>
-        <br>
+        <br><br>
         <label id="" class="" for="frmEdit-pseudo">Pseudo</label>
           <div id="div-frmEdit-pseudo" class="ui input">
             {{input id="frmEdit-pseudo" value=model.identity placeholder="Pseudo"}}
           </div>
-        <br>
+        <br><br>
         {{#ui-dropdown class="selection" selected=gender2 onChange=(action (mut gender2)) as |execute mapper|}}
           <i class="dropdown icon"></i>
           <div class="default text">Genre</div>
@@ -24,17 +24,17 @@
             <div class="item" data-value="0">Feminin</div>
           </div>
         {{/ui-dropdown}}
-        <br>
+        <br><br>
         <label id="" class="" for="frmEdit-email">Email</label>
           <div id="div-frmEdit-email" class="ui input">
             {{input id="frmEdit-email" value=model.identity placeholder="Email"}}
           </div>
-        <br>
+        <br><br>
         <label id="" class="" for="frmEdit-mdp">Mot de passe</label>
           <div id="div-frmEdit-mdp" class="ui input">
             {{input id="frmEdit-mdp" value=model.identity placeholder="Mdp"}}
           </div>
-        <br>
+        <br><br>
         <label id="" class="" for="frmEdit-confirmemdp">Confirmer mot de passe</label>
         <div id="div-frmEdit-confirmemdp" class="ui input">
           {{input id="frmEdit-confirmmdp" value=model.identity placeholder="Mdp"}}
@@ -44,10 +44,13 @@
           <input type="checkbox" name="example">
           <label>Accepter les conditions d'utilisation</label>
         </div>
-        <br>
+        <br><br>
         <button class="ui green button">Green</button>
       </div>
   </form>
-
 </div>
+
+<br><br>
+<footer>2 SIO | 2018 &copy; Tous droits réservés</footer>
+
 {{outlet}}
