@@ -1,18 +1,25 @@
-<div>
+<div id="homeHeader" style="text-align: center; border-bottom: 2px solid grey; border-top: 2px solid grey; padding-top: 15px; margin-bottom:25px;">
+  <h1>Bienvenue sur Boards</h1>
+  <i>Votre nouvel outil de gestion de projet</i>
+  <br> <br>
+</div>
+
+
+<div style="text-align: left; margin-left: 40%;">
   <form>
       <div class="field">
         <label id="" class="" for="frmEdit-nom">Nom</label>
-          <div id="div-frmEdit-nom" class="ui input">
+          <div id="div-frmEdit-nom" class="ui input alignedroit">
             {{input id="frmEdit-nom" value=model.identity placeholder="Nom"}}
           </div>
         <br><br>
         <label id="" class="" for="frmEdit-prenom">Prénom</label>
-          <div id="div-frmEdit-prenom" class="ui input">
+          <div id="div-frmEdit-prenom" class="ui input alignedroit">
             {{input id="frmEdit-prenom" value=model.identity placeholder="Prénom"}}
           </div>
         <br><br>
         <label id="" class="" for="frmEdit-pseudo">Pseudo</label>
-          <div id="div-frmEdit-pseudo" class="ui input">
+          <div id="div-frmEdit-pseudo" class="ui input alignedroit">
             {{input id="frmEdit-pseudo" value=model.identity placeholder="Pseudo"}}
           </div>
         <br><br>
@@ -26,17 +33,17 @@
         {{/ui-dropdown}}
         <br><br>
         <label id="" class="" for="frmEdit-email">Email</label>
-          <div id="div-frmEdit-email" class="ui input">
+          <div id="div-frmEdit-email" class="ui input alignedroit">
             {{input id="frmEdit-email" value=model.identity placeholder="Email"}}
           </div>
         <br><br>
         <label id="" class="" for="frmEdit-mdp">Mot de passe</label>
-          <div id="div-frmEdit-mdp" class="ui input">
+          <div id="div-frmEdit-mdp" class="ui input alignedroit">
             {{input id="frmEdit-mdp" value=model.identity placeholder="Mdp"}}
           </div>
         <br><br>
         <label id="" class="" for="frmEdit-confirmemdp">Confirmer mot de passe</label>
-        <div id="div-frmEdit-confirmemdp" class="ui input">
+        <div id="div-frmEdit-confirmemdp" class="ui input alignedroit">
           {{input id="frmEdit-confirmmdp" value=model.identity placeholder="Mdp"}}
         </div>
         <br>
@@ -45,7 +52,7 @@
           <label>Accepter les conditions d'utilisation</label>
         </div>
         <br><br>
-        <button class="ui green button">Green</button>
+        <button class="ui green button">Valider</button>
       </div>
   </form>
 </div>
