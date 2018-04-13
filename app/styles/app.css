@@ -28,3 +28,7 @@
 .inputForm {
   width: 33%;
 }
+
+.ui.selection.dropdown{
+  min-width: 26.5em;
+}

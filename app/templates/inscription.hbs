@@ -7,28 +7,28 @@
 <div class="ui form" style="margin-bottom: 25px; text-align: center">
   <div class="field">
     <label id="" class="" for="frmEdit-nom">Nom</label>
-    <div id="div-frmEdit-nom" class="ui input inputForm alignedroit">
+    <div id="div-frmEdit-nom" class="ui input" style="width: 33%">
       {{input id="frmEdit-nom" value=model.identity placeholder="Nom"}}
     </div>
   </div>
 
   <div class="field">
     <label id="" class="" for="frmEdit-prenom">Prénom</label>
-    <div id="div-frmEdit-prenom" class="ui input inputForm alignedroit">
+    <div id="div-frmEdit-prenom" class="ui input"  style="width: 33%">
       {{input id="frmEdit-prenom" value=model.identity placeholder="Prénom"}}
     </div>
   </div>
 
   <div class="field">
     <label id="" class="" for="frmEdit-pseudo">Pseudo</label>
-    <div id="div-frmEdit-pseudo" class="ui input inputForm alignedroit">
+    <div id="div-frmEdit-pseudo" class="ui input" style="width: 33%">
       {{input id="frmEdit-pseudo" value=model.identity placeholder="Pseudo"}}
     </div>
   </div>
 
   <div class="field">
     <label id="" class="" for="frmEdit-genre">Genre</label>
-    <div id="div-frmEdit-email" class="ui input inputForm alignedroit">
+    <div id="div-frmEdit-email" class="ui input" style="width: 33%;">
       {{#ui-dropdown class="selection" selected=gender2 onChange=(action (mut gender2)) as |execute mapper|}}
         <i class="dropdown icon"></i>
         <div class="default text">Genre</div>
@@ -42,21 +42,21 @@
 
   <div class="field">
     <label id="" class="" for="frmEdit-email">Email</label>
-    <div id="div-frmEdit-email" class="ui input inputForm">
+    <div id="div-frmEdit-email" class="ui input" style="width: 33%">
       {{input id="frmEdit-email" value=model.identity placeholder="Email"}}
     </div>
   </div>
 
   <div class="field">
     <label id="" class="" for="frmEdit-mdp">Mot de passe</label>
-    <div id="div-frmEdit-mdp" class="ui input ">
+    <div id="div-frmEdit-mdp" class="ui input" style="width: 33%">
       {{input id="frmEdit-mdp" value=model.identity placeholder="Mdp"}}
     </div>
   </div>
 
   <div class="field">
     <label id="" class="" for="frmEdit-confirmemdp">Confirmer mot de passe</label>
-    <div id="div-frmEdit-confirmemdp" class="ui input alignedroit">
+    <div id="div-frmEdit-confirmemdp" class="ui input" style="width: 33%">
       {{input id="frmEdit-confirmmdp" value=model.identity placeholder="Mdp"}}
     </div>
   </div>
