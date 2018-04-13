@@ -8,35 +8,30 @@
 
   <div></div>
 
-  <div class="ui form">
-    <div class="inline fields">
-      <div class="ten wide field">
-        <label style="width: 20%">Pseudo</label>
-        <input type="text" style="width: 30%">
+  <div class="ui form" style="margin-bottom: 25px; text-align: center">
+    <div class="field">
+      <label>Pseudo</label>
+      <div id="" class="ui input">
+        {{input id="" value=model.pseudo}}
       </div>
     </div>
-
-    <div class="inline fields">
-      <div class="ten wide field">
-        <label style="width: 20%">Mot de passe</label>
-        <input type="password" style="width: 30%">
+    <div class="field">
+      <label style="">Mot de passe</label>
+      <div id="" class="ui input">
+        {{input id="" value=model.password}}
       </div>
     </div>
-
-    <div class="inline fields">
-      <div class="ten wide field">
+    <div class="field" style="text-align: center">
+      <label>
         <i class="question circle icon"></i>
-        <label>{{#link-to "index" class="item"}}Mot de passe oublié{{/link-to}}</label>
-      </div>
+        {{#link-to "index" class="item"}}Mot de passe oublié?{{/link-to}}
+      </label>
     </div>
 
-    <div class="inline fields">
-      <div class="ten wide field">
-        <button class="ui button" style="width: 52%">Connexion</button>
-      </div>
-    </div>
-
+    <button class="ui button" style="width: 33%">Connexion</button>
   </div>
+
+
 </div>
 
 <footer style="text-align: center">2 SIO | 2018 © Tous droits réservés</footer>
