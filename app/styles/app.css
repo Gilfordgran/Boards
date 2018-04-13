@@ -25,32 +25,6 @@
   margin-bottom: 50px;
 }
 
-/*inscription alignement des zones de saisie*/
-.alignedroitn
-{
-  margin-left: 19.5%;
-}
-.alignedroitp
-{
-  margin-left: 16.8%;
-}
-.alignedroitps
-{
-  margin-left: 17%;
-}
-.alignedroite
-{
-  margin-left: 18.8%;
-}
-.alignedroitmdp
-{
-  margin-left: 12.2%;
-}
-.alignedroitcmdp
- {
-   margin-left: 3.2%;
- }
-.alignedroitg
-{
-  margin-left: 19.5%;
+.inputForm {
+  width: 33%;
 }
