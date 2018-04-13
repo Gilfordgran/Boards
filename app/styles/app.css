@@ -1,20 +1,28 @@
 .imageFonctionnalité {
+  width: 100%;
+}
+
+.containerFonctionnalité {
   width: 19%;
-  height: 200px;
-  background: black;
   float: left;
   margin-right: 3%;
   margin-left: 3%;
+  text-align: center;
 }
 
 .descriptionFonctionnalité {
   width: 19%;
-  height: 200px;
   text-align: justify;
   float: left;
   margin-right: 3%;
   margin-left: 3%;
   margin-top: 15px;
+  font-size: 20px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.homeContainer {
+  margin-bottom: 50px;
 }
 
 /*inscription alignement des zones de saisie*/
