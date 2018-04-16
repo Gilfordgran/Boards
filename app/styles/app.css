@@ -24,3 +24,7 @@
 .homeContainer {
   margin-bottom: 50px;
 }
+
+.ui.selection.dropdown{
+  min-width: 26.5em;
+}

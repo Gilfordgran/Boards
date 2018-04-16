@@ -4,64 +4,74 @@
   <br> <br>
 </div>
 
+<div class="ui form" style="margin-bottom: 25px; text-align: center">
+  <div class="field">
+    <label id="" class="" for="frmEdit-nom">Nom</label>
+    <div id="div-frmEdit-nom" class="ui input" style="width: 33%">
+      {{input id="frmEdit-nom" value=model.identity placeholder="Nom"}}
+    </div>
+  </div>
 
-<div style="text-align: left; margin-left: 35%;">
-  <form>
-      <div class="field">
-        <label id="" class="" for="frmEdit-nom">Nom</label>
-          <div id="div-frmEdit-nom" class="ui input">
-            {{input id="frmEdit-nom" value=model.identity placeholder="Nom"}}
-          </div>
-        <br><br>
-        <label id="" class="" for="frmEdit-prenom">Prénom</label>
-          <div id="div-frmEdit-prenom" class="ui input alignedroitp">
-            {{input id="frmEdit-prenom" value=model.identity placeholder="Prénom"}}
-          </div>
-        <br><br>
-        <label id="" class="" for="frmEdit-pseudo">Pseudo</label>
-          <div id="div-frmEdit-pseudo" class="ui input alignedroitps">
-            {{input id="frmEdit-pseudo" value=model.identity placeholder="Pseudo"}}
-          </div>
+  <div class="field">
+    <label id="" class="" for="frmEdit-prenom">Prénom</label>
+    <div id="div-frmEdit-prenom" class="ui input"  style="width: 33%">
+      {{input id="frmEdit-prenom" value=model.identity placeholder="Prénom"}}
+    </div>
+  </div>
 
-        <br><br>
-        <label id="" class="" for="frmEdit-genre">Genre</label>
-        <div id="div-frmEdit-email" class="ui input alignedroitg">
-        {{#ui-dropdown class="selection" selected=gender2 onChange=(action (mut gender2)) as |execute mapper|}}
-          <i class="dropdown icon"></i>
-          <div class="default text">Genre</div>
-          <div class="menu">
-            <div class="item" data-value="1">Masculin</div>
-            <div class="item" data-value="0">Feminin</div>
-          </div>
-        {{/ui-dropdown}}
+  <div class="field">
+    <label id="" class="" for="frmEdit-pseudo">Pseudo</label>
+    <div id="div-frmEdit-pseudo" class="ui input" style="width: 33%">
+      {{input id="frmEdit-pseudo" value=model.identity placeholder="Pseudo"}}
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="" class="" for="frmEdit-genre">Genre</label>
+    <div id="div-frmEdit-email" class="ui input" style="width: 33%;">
+      {{#ui-dropdown class="selection" selected=gender2 onChange=(action (mut gender2)) as |execute mapper|}}
+        <i class="dropdown icon"></i>
+        <div class="default text">Genre</div>
+        <div class="menu">
+          <div class="item" data-value="1">Masculin</div>
+          <div class="item" data-value="0">Feminin</div>
         </div>
-        <br><br>
-        <label id="" class="" for="frmEdit-email">Email</label>
-          <div id="div-frmEdit-email" class="ui input alignedroite">
-            {{input id="frmEdit-email" value=model.identity placeholder="Email"}}
-          </div>
-        <br><br>
-        <label id="" class="" for="frmEdit-mdp">Mot de passe</label>
-          <div id="div-frmEdit-mdp" class="ui input alignedroitmdp">
-            {{input id="frmEdit-mdp" value=model.identity placeholder="Mdp"}}
-          </div>
-        <br><br>
-        <label id="" class="" for="frmEdit-confirmemdp">Confirmer mot de passe</label>
-        <div id="div-frmEdit-confirmemdp" class="ui input alignedroitcmdp">
-          {{input id="frmEdit-confirmmdp" value=model.identity placeholder="Mdp"}}
-        </div>
-        <br><br>
-        <div class="ui checkbox">
-          <input type="checkbox" name="example">
-          <label>Accepter les conditions d'utilisation</label>
-        </div>
-        <br><br>
-        <button class="ui green button">Valider</button>
-      </div>
-  </form>
+      {{/ui-dropdown}}
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="" class="" for="frmEdit-email">Email</label>
+    <div id="div-frmEdit-email" class="ui input" style="width: 33%">
+      {{input id="frmEdit-email" value=model.identity placeholder="Email"}}
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="" class="" for="frmEdit-mdp">Mot de passe</label>
+    <div id="div-frmEdit-mdp" class="ui input" style="width: 33%">
+      {{input id="frmEdit-mdp" value=model.identity placeholder="Mdp"}}
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="" class="" for="frmEdit-confirmemdp">Confirmer mot de passe</label>
+    <div id="div-frmEdit-confirmemdp" class="ui input" style="width: 33%">
+      {{input id="frmEdit-confirmmdp" value=model.identity placeholder="Mdp"}}
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="example">
+      <label>Accepter les conditions d'utilisation</label>
+    </div>
+  </div>
+
+  <button style="width: 33%" class="ui green button">Valider</button>
+
 </div>
 
-<br><br>
-<footer>2 SIO | 2018 &copy; Tous droits réservés</footer>
+<footer style="text-align: center; margin-bottom: 15px">2 SIO | 2018 &copy; Tous droits réservés</footer>
 
 {{outlet}}

@@ -7,33 +7,33 @@ import Ember from 'ember';
 export default Route.extend({
   model(params){
     return RSVP.hash({
-      oldStory: this.get('store').findRecord('story',params.story_id),
-      developers: this.get('store').findAll('developer'),
-      project: this.get('store').findRecord('project',params.project_id),
+      oldStory    : this.get('store').findRecord('story',params.story_id),
+      developers  : this.get('store').findAll('developer'),
+      project     : this.modelFor('project'),
     });
   },
   afterModel(model){
     let newStory=EmberObject.create(JSON.parse(JSON.stringify(model.oldStory)));
     Ember.set(model,'newStory',newStory);
-    Ember.set(model,'idDeveloper',model.oldProject.get('developer').get('id'));
+    Ember.set(model,'idDeveloper',model.oldStory.get('developer').get('id'));
   },
   actions:{
     didTransition() {
       Ember.run.next(this, 'initUI');
     },
     save(oldStory,story) {
-      let model = this.modelFor(this.routeName);
-      let project=Ember.get(model,'project');
+      let model       = this.modelFor(this.routeName);
+      let project     = Ember.get(model,'project');
       oldStory.set('code',newStory.code);
       oldStory.set('description',newStory.description);
       oldStory.set('project', project);
       let idDeveloper = Ember.get(model, 'idDeveloper');
-      let dev = Ember.get(model, 'developers').find(dev => dev.id == idDeveloper);
+      let dev         = Ember.get(model, 'developers').find(dev => dev.id == idDeveloper);
       oldStory.set('developer', dev);
-      let idTags=Ember.get(model,'idTags');
-      let tags=Ember.get(model,'tags').filter((item, index, self) => idTags.includes(item.id));
+      let idTags      = Ember.get(model,'idTags');
+      let tags        = Ember.get(model,'tags').filter((item, index, self) => idTags.includes(item.id));
       oldStory.set('tags',tags);
-      let self=this;
+      let self        = this;
       story.save().then(()=>{
         project.save().then(()=>{self.transitionTo("project",project);});
       });
@@ -44,8 +44,8 @@ export default Route.extend({
       this.transitionTo("project",project);
     },
     newTag(tag){
-      tag=this.get('store').createRecord('tag',{title:tag.title,color:tag.color});
-      let self=this;
+      tag         = this.get('store').createRecord('tag',{title:tag.title,color:tag.color});
+      let self    = this;
       tag.save().then(()=>{
         let model = self.modelFor(this.routeName);
         Ember.$('#ddTags').dropdown('set selected',tag.id);
