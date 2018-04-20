@@ -5,6 +5,7 @@ import Ember from 'ember';
 
 
 export default Route.extend({
+  templateName: 'story/frm',
   model(params){
     return RSVP.hash({
       story: EmberObject.create(),

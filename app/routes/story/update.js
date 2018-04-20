@@ -5,6 +5,7 @@ import Ember from 'ember';
 
 
 export default Route.extend({
+  templateName: "story/frm",
   model(params){
     return RSVP.hash({
       oldStory    : this.get('store').findRecord('story',params.story_id),
