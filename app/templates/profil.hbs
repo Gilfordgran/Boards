@@ -1,7 +1,44 @@
-<div id="homeHeader" style="text-align: center; border-bottom: 2px solid grey; border-top: 2px solid grey; padding-top: 15px; margin-bottom: 25px">
+<div id="homeHeader">
   <h1>Votre profil</h1>
   <i>Consulter vos données personnelles</i>
   <br> <br>
 </div>
 
+<div class="ui form" style="margin-bottom: 25px;">
+    <div class="field">
+        <label>Pseudo</label>
+        <div id="" class="ui input" style="width: 33%;">
+            {{input id="" value=model.pseudo}}
+        </div>
+    </div>
+    <div class="field">
+        <label style="">Nom</label>
+        <div id="" class="ui input" style="width: 33%;">
+            {{input id="" value=model.password}}
+        </div>
+        <button class="circular ui icon button">
+            <i class="icon circle check green"></i>
+        </button>
+    </div>
+    <div class="field">
+        <label style="">Prénom</label>
+        <div id="" class="ui input" style="width: 33%;">
+            {{input id="" value=model.password}}
+        </div>
+        <button class="circular ui icon button">
+            <i class="icon circle check green"></i>
+        </button>
+    </div>
+    <div class="field">
+        <label style="">Email</label>
+        <div id="" class="ui input" style="width: 33%;">
+            {{input id="" value=model.password}}
+        </div>
+        <button class="circular ui icon button">
+            <i class="icon circle check green"></i>
+        </button>
+    </div>
+</div>
 {{outlet}}
+
+<footer style="text-align: center">2 SIO | 2018 © Tous droits réservés</footer>

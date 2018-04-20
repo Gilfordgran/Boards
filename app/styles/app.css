@@ -1,5 +1,13 @@
-.imageFonctionnalité {
-  width: 100%;
+#homeHeader {
+  text-align: center;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  padding-top: 15px;
+  margin-bottom: 25px;
+}
+
+.homeContainer {
+  margin-bottom: 50px;
 }
 
 .containerFonctionnalité {
@@ -10,27 +18,39 @@
   text-align: center;
 }
 
+.imageFonctionnalité {
+  width: 100%;
+}
+
 .descriptionFonctionnalité {
-  width: 19%;
+  width: 25%;
   text-align: justify;
   float: left;
-  margin-right: 3%;
-  margin-left: 3%;
+  padding-right: 3%;
+  padding-left: 3%;
   margin-top: 15px;
   font-size: 20px;
   font-family: "Gill Sans", sans-serif;
-}
-
-.homeContainer {
-  margin-bottom: 50px;
 }
 
 #genreInput{
   min-width: 100% !important;
 }
 
+/*image de la connexion centrée*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
 footer {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 40%;
   margin-bottom: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
 }
