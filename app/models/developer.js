@@ -8,7 +8,8 @@ export default DS.Model.extend({
   genre:DS.attr('string'),
   pseudo:DS.attr('string'),
   projects: DS.hasMany('project',{inverse:'owner'}),
+
   toString:function(){
-    return this.get('identity');
+    return this.get('pseudo');
   }
 });
