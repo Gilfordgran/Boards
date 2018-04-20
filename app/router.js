@@ -13,9 +13,9 @@ Router.map(function() {
     this.route('update',{ path: 'update/:project_id' });
   });
   this.route('developers', function() {
-    this.route('new',{ path: 'inscription' });
     this.route('update',{ path: 'update/:developer_id' });
     this.route('delete',{ path: 'delete/:developer_id' });
+    this.route('new');
   });
   this.route('project', { path: 'project/:project_id' }, function() {});
 
@@ -25,6 +25,7 @@ Router.map(function() {
   });
   this.route('connexion');
   this.route('profil');
+  this.route('inscription');
 });
 
 export default Router;
