@@ -13,7 +13,7 @@ Router.map(function() {
     this.route('update',{ path: 'update/:project_id' });
   });
   this.route('developers', function() {
-    this.route('new');
+    this.route('new',{ path: 'inscription' });
     this.route('update',{ path: 'update/:developer_id' });
     this.route('delete',{ path: 'delete/:developer_id' });
   });
@@ -23,8 +23,8 @@ Router.map(function() {
     this.route('new', {path: 'new/:project_id'});
     this.route('update',{ path: 'update/:story_id' });
   });
-  this.route('inscription');
   this.route('connexion');
+  this.route('profil');
 });
 
 export default Router;

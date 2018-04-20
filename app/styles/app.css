@@ -25,6 +25,24 @@
   margin-bottom: 50px;
 }
 
-.ui.selection.dropdown{
-  min-width: 26.5em;
+#genreInput{
+  min-width: 100% !important;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40%;
+  margin-bottom: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+}
+
+/*image de la connexion centrée*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
