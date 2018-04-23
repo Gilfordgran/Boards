@@ -5,8 +5,8 @@ export default Route.extend({
   model(){
     return RSVP.hash({
       developers:this.get('store').findAll('developer',{include:"projects"}),
-      fields:['nom','prenom','pseudo','email','genre'],
-      operations:[{icon:'red remove',link:'developers.delete'}]
+      fields:['nom','prenom','pseudo','email'],
+      operations:[{icon:'red remove',link:'developers.delete'},{icon:'eye',link:'developers.delete'}]
     });
   }
 });

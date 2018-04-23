@@ -34,7 +34,22 @@
 }
 
 #genreInput{
-  min-width: 100% !important;
+  width: 50% !important;
+}
+
+.ui .input {
+  width:50% !important;
+}
+
+.field {
+  margin-left: 25% !important;
+  width: 50%;
+  padding-right: 0px !important;
+}
+
+.inputLabel {
+  width: 25% !important;
+  text-align: left;
 }
 
 /*image de la connexion centrée*/
@@ -47,10 +62,8 @@
 
 footer {
   text-align: center;
-  margin-top: 40%;
+  margin-top: 100px;
   margin-bottom: 15px;
-  left: 0;
-  bottom: 0;
   width: 100%;
   color: black;
 }
