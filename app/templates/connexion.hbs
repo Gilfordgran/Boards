@@ -15,13 +15,13 @@
     <div class="field">
       <label>Pseudo</label>
       <div id="" class="ui input" style="width: 33%;">
-        {{input id="" value=model.pseudo}}
+        {{input id="" value=model.pseudo placeholder="Pseudo"}}
       </div>
     </div>
     <div class="field">
       <label style="">Mot de passe</label>
       <div id="" class="ui input" style="width: 33%;">
-        {{input id="" value=model.password}}
+        {{input id="" value=model.password placeholder="Mot de passe" type="password"}}
       </div>
     </div>
     <div class="field" style="text-align: center">
@@ -31,7 +31,7 @@
       </label>
     </div>
 
-    <button class="ui button inputForm green">Connexion</button>
+    <button class="ui button inputForm green" {{action "connexion"}}>Connexion</button>
   </div>
 
 

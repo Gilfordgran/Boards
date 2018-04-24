@@ -1,35 +1,42 @@
 import Route from '@ember/routing/route';
+import {get} from  '@ember/object';
+import {inject as service} from '@ember/service';
 import RSVP from 'rsvp';
-import Ember from 'ember';
 
 export default Route.extend({
     model(){
         return RSVP.hash({
-            notifications: Ember.inject.service('notification-messages'),
-            genre:['Masculin','Féminin'],
-            condition: "Ember.get(model, 'password') === Ember.get(model, 'passwordConfirm') " +
-                "&& Ember.get(model, 'password') !== undefined " +
-                "&& Ember.get(model, 'passwordConfirm') !== undefined"
+            notifications   : service('notification-messages'),
+            genre           :['Masculin','Féminin'],
         });
     },
     actions:{
         save() {
-            let model   = this.modelFor(this.routeName);
+            let model           = this.modelFor(this.routeName);
+            let notifications   = get(model,"notifications");
 
             let dataDev = {
-                "nom": Ember.get(model, 'nom'),
-                "prenom": Ember.get(model, 'prenom'),
-                "email": Ember.get(model, 'email'),
-                "password": Ember.get(model, 'password'),
-                "genre": Ember.get(model, 'genre'),
-                "pseudo": Ember.get(model, 'pseudo'),
+                "nom"       : get(model, 'nom'),
+                "prenom"    : get(model, 'prenom'),
+                "email"     : get(model, 'email'),
+                "password"  : get(model, 'password'),
+                "genre"     : get(model, 'genre'),
+                "pseudo"    : get(model, 'pseudo'),
             };
 
-            if(this.condition){
-                let newDeveloper = this.get('store').createRecord('developer',dataDev);
-                newDeveloper.save().then(()=>{this.transitionTo("developers");});
+            if(get(model, 'nom') !== undefined && get(model, 'prenom') !== undefined && get(model, 'pseudo') !== undefined
+                && get(model, 'email') !== undefined && get(model, 'password') !== undefined
+                && get(model, 'passwordConfirm') !== undefined)
+            {
+                if(get(model, 'password') === get(model, 'passwordConfirm')){
+                    let newDeveloper = this.get('store').createRecord('developer',dataDev);
+                    newDeveloper.save().then(()=>{this.transitionTo("developers");});
+                    notifications.success('Inscription réussite');
+                } else {
+                    notifications.error('Les mots de passe ne correspondent pas');
+                }
             } else {
-                this.get('notifications').error('Les deux mots de passe ne correspondent pas');
+                notifications.error('Tous les champs ne sont pas remplis');
             }
         }
     }
