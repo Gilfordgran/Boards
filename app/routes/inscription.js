@@ -1,16 +1,20 @@
 import Route from '@ember/routing/route';
 import {get} from  '@ember/object';
+import {inject as service} from '@ember/service';
 import RSVP from 'rsvp';
 
 export default Route.extend({
     model(){
         return RSVP.hash({
+            notifications   : service('notification-messages'),
             genre           :['Masculin','Féminin'],
         });
     },
     actions:{
         save() {
             let model           = this.modelFor(this.routeName);
+            let notifications   = get(model,"notifications");
+
             let dataDev = {
                 "nom"       : get(model, 'nom'),
                 "prenom"    : get(model, 'prenom'),
@@ -27,12 +31,12 @@ export default Route.extend({
                 if(get(model, 'password') === get(model, 'passwordConfirm')){
                     let newDeveloper = this.get('store').createRecord('developer',dataDev);
                     newDeveloper.save().then(()=>{this.transitionTo("developers");});
-                    console.log("Succés");
+                    notifications.success('Inscription réussite');
                 } else {
-                    console.log('Les mots de passe ne correspondent pas');
+                    notifications.error('Les mots de passe ne correspondent pas');
                 }
             } else {
-                console.log('Tous les champs ne sont pas remplis');
+                notifications.error('Tous les champs ne sont pas remplis');
             }
         }
     }

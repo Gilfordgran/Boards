@@ -3,6 +3,10 @@ import RSVP from 'rsvp';
 import Ember from 'ember';
 import projectBase from '../../utils/project-base';
 
+/**
+ * création d'un nouveau projet
+ * stockage dans le store (ensemble des données)
+ */
 export default Route.extend({
   templateName: 'projects/frm',
   model(){

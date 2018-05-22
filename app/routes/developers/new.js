@@ -1,5 +1,9 @@
 import Route from '@ember/routing/route';
 import EmberObject from '@ember/object';
+
+/**
+ * création d'un développeur
+ */
 export default Route.extend({
     model(){
         return EmberObject.create();

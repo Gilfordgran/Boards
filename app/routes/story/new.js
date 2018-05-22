@@ -4,6 +4,10 @@ import RSVP from 'rsvp';
 import Ember from 'ember';
 
 
+/**
+ * création des taches associés à un projet
+ * association de différent tag pour qualifier le projet
+ */
 export default Route.extend({
   templateName: 'story/frm',
   model(params){

@@ -4,6 +4,12 @@ import RSVP from 'rsvp';
 import Ember from 'ember';
 
 
+/**
+ * mise à jour des story
+ * modification de l'ensemble des données de la story (descriptif, dev, tag)
+ * possibilité d'annuler l'action en cours
+ * ajout ou modification du tag
+ */
 export default Route.extend({
   templateName: "story/frm",
   model(params){

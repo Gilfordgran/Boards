@@ -3,6 +3,11 @@ import RSVP from 'rsvp';
 import Ember from 'ember';
 import EmberObject from '@ember/object';
 
+/**
+ * mise à jour d'un projet
+ * définition d'une date de création et d'une date butoire
+ * associaion de plusieurs dev à un même projet
+ */
 export default Route.extend({
   templateName: 'projects/frm',
   model(params){

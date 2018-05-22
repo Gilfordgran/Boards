@@ -24,7 +24,7 @@ Router.map(function() {
     this.route('update',{ path: 'update/:story_id' });
   });
   this.route('connexion');
-  this.route('profil', { path: 'profil/:developer_id' }, function() {});
+  this.route('profil');
   this.route('inscription');
 });
 
