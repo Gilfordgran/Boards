@@ -1,6 +1,9 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
+/**
+ * récapitulatif des dev et de leurs données
+ */
 export default Route.extend({
   model(){
     return RSVP.hash({

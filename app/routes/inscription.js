@@ -3,6 +3,11 @@ import {get} from  '@ember/object';
 import {inject as service} from '@ember/service';
 import RSVP from 'rsvp';
 
+/**
+ * formulaire d'inscription
+ * envoie des données dans la bdd mangodb
+ * retourne un message d'erreur si les données mdp sont différentes
+ */
 export default Route.extend({
     model(){
         return RSVP.hash({

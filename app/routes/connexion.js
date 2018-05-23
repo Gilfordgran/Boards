@@ -3,6 +3,10 @@ import {get} from  '@ember/object';
 import {inject as service} from '@ember/service';
 import RSVP from 'rsvp';
 
+/**
+ * permet de se connecter
+ * envoie les donner à la base de données
+ */
 export default Route.extend({
     model(){
         return RSVP.hash({
