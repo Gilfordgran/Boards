@@ -1,0 +1,51 @@
+<div>
+    <div class="ui button primary">
+        <i class="file open icon"></i> Stories
+    </div>
+    <div class="ui button secondary">
+        {{#link-to "project.developers" class="contentButton"}}<i class="users open icon"></i> Developpeurs{{/link-to}}
+    </div>
+
+    <br><br>
+
+    <div>
+        {{#link-to "project.stories.new" model.id class="ui button"}}<i class="ui plus icon"></i> Ajouter {{/link-to}}
+
+        {{#link-to "projects" class="ui button"}}<i class="caret square left icon"></i>Retour aux projets{{/link-to}}
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+{{outlet}}
+
+<div class="ui middle aligned divided list">
+    {{#each model.stories as |story|}}
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui left labeled button" tabindex="0">
+                    <a class="ui basic right pointing label">
+                        {{story.developer.pseudo}}
+                    </a>
+                    {{#link-to "project.stories.update" story.id class="ui button"}}
+                        <i class="user icon"></i> Mise à jour...
+                    {{/link-to}}
+                </div>
+            </div>
+            <i class="big file middle aligned icon"></i>
+            <div class="content">
+                <div class="header">
+                    {{story.code}}
+                </div>
+                <div class="description">
+                    {{story.description}}
+                    {{#each story.tags as |tag|}}
+                        <a class="ui {{tag.color}} label">{{tag.title}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<footer >2 SIO | 2018 © Tous droits réservés</footer>

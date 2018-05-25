@@ -1,10 +1,38 @@
 <div>
   {{#ui-form oldValue=model.dev newValue=model.data  validation="save" cancel="cancel" bigIcon='user' smallIcon='edit' header='Developer' description='Editing an existing object'}}
-    <div class="field">
-      <label id="" class="" for="frmEdit-identity">Identité</label>
-      <div id="div-frmEdit-identity" class="ui input">
-        {{input id="frmEdit-identity" value=model.data.identity placeholder="Identity"}}
+      <div class="ui form" style="margin-bottom: 25px; text-align: center">
+          <div class="inline fields">
+              <div class="field">
+                  <label id="" class="inputLabel" for="frmEdit-nom">Nom</label>
+                  <div id="div-frmEdit-nom" class="ui input">
+                      {{input id="frmEdit-nom" value=model.data.nom placeholder="Nom"}}
+                  </div>
+              </div>
+          </div>
+          <div class="inline fields">
+              <div class="field">
+                  <label id="" class="inputLabel" for="frmEdit-nom">prenom</label>
+                  <div id="div-frmEdit-prenom" class="ui input">
+                      {{input id="frmEdit-prenom" value=model.data.prenom placeholder="Prénom"}}
+                  </div>
+              </div>
+          </div>
+          <div class="inline fields">
+              <div class="field">
+                  <label id="" class="inputLabel" for="frmEdit-pseudo">Pseudo</label>
+                  <div id="div-frmEdit-pseudo" class="ui input">
+                      {{input id="frmEdit-pseudo" value=model.data.pseudo placeholder="Pseudo"}}
+                  </div>
+              </div>
+          </div>
+          <div class="inline fields">
+              <div class="field">
+                  <label id="" class="inputLabel" for="frmEdit-email">Email</label>
+                  <div id="div-frmEdit-email" class="ui input">
+                      {{input id="frmEdit-email" value=model.data.email placeholder="Email"}}
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
   {{/ui-form}}
 </div>{{outlet}}

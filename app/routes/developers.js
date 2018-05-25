@@ -9,7 +9,7 @@ export default Route.extend({
     return RSVP.hash({
       developers:this.get('store').findAll('developer',{include:"projects"}),
       fields:['nom','prenom','pseudo','email'],
-      operations:[{icon:'red remove',link:'developers.delete'},{icon:'eye',link:'developers.delete'}]
+      operations:[{icon:'red remove',link:'developers.delete'},{icon:'edit',link:'developers.update'}]
     });
   }
 });

@@ -1,0 +1,12 @@
+{{#ui-form newValue=model  validation="save" cancel="cancel"}}
+    <div class="ui form" style="margin-bottom: 25px; text-align: center">
+        <div class="inline fields">
+            <div class="field">
+                <label for="owner">Ajouter un participant</label>
+                {{multi-select selected=model.idDeveloper name="owner" placeholder="Owner" elements=model.developers selectedElements=model.newProject.owner}}
+            </div>
+        </div>
+    </div>
+{{/ui-form}}
+
+<div class="ui divider"></div>

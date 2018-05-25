@@ -7,7 +7,7 @@ export default DS.Model.extend({
   password:DS.attr('string'),
   genre:DS.attr('string'),
   pseudo:DS.attr('string'),
-  projects: DS.hasMany('project',{inverse:'owner'}),
+  projects: DS.hasMany('project', {inverse: 'developers'}),
 
   toString:function(){
     return this.get('pseudo');

@@ -7,6 +7,7 @@ export default DS.Model.extend({
   startDate:DS.attr('date'),
   dueDate:DS.attr('date'),
   owner:DS.belongsTo('developer'),
+  developers:DS.hasMany('developer'),
   stories:DS.hasMany('story'),
   sDate: computed('startDate',function(){
     if(this.get('startDate'))
